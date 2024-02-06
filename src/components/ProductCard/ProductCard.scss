@@ -1,0 +1,144 @@
+@import "../../style/variables";
+@import "../../style/_mixins";
+
+.product-card {
+  border: 1px solid $elements;
+  width: 272px;
+  height: 507px;
+
+  @include onMobile {
+    width: 222px;
+    height: 400px;
+    
+  }
+}
+
+.phone {
+  list-style: none;
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__img {
+    width: 145px;
+    height: 200px;
+    margin: 32px 32px 24px 64px;
+
+    @include onMobile {
+      width: 100px;
+      height: 130px;
+      margin: 22px 22px 4px 54px;
+      object-fit: contain;
+    }
+  }
+
+  &__name {
+    font-family: "Mont-Regular", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $navbarLinkColor;
+    margin: 0 24px 8px;
+    width: 170px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+
+  &__cost {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 24px 8px;
+
+    &--discount {
+      font-family: "Mont-Bold", sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 31px;
+      color: $navbarLinkColor;
+    }
+
+    &--real {
+      font-family: "Mont-Regular", sans-serif;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 28px;
+      color: $footerNavLinksColor;
+      text-decoration: line-through;
+    }
+  }
+
+  &__criteria {
+
+    &--container {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 24px 8px;
+    }
+
+    &--big {
+      font-family: "Mont-Regular", sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 15px;
+      color: $secondary;
+    }
+
+    &--small {
+      font-family: "Mont-SemiBold", sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 15px;
+      color: $primary;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 8px;
+    margin: 16px 24px 0;
+  }
+
+  &__border {
+    border-bottom: 1px solid $elements;
+    width: 224px;
+    margin: 0 7px 16px 24px;
+  }
+}
+
+.button__cart {
+  width: 176px;
+  height: 40px;
+  background-color: $primary;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.button__fav {
+  height: 40px;
+  width: 40px;
+
+  background-image: url(../../images/Heart.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 1px solid $icons;
+  background-color: $white;
+  cursor: pointer;
+}
+
+.is-added {
+  background-color: $white;
+  border: 1px solid $elements;
+  color: $greenColor;
+}
+
+.is-fav {
+  background-image: url(../../images/HeartRed.svg);
+}

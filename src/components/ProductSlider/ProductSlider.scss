@@ -1,0 +1,64 @@
+@import "../../style/variables";
+@import "../../style/_mixins";
+
+.productSlider {
+  margin-top: 72px;
+  transition: transform 0.5s ease-in-out;
+
+  &__title-and-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: "Mont-Bold", sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -1%;
+
+    @include onMobile {
+      font-size: 26px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__container {
+    display: flex;
+    gap: 16px;
+    overflow: hidden;
+  }
+
+  &__card {
+    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateX(-100%);
+
+    &--visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+.button {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  border: 1px solid $icons;
+  background-color: $white;
+
+  &--prev {
+    background-image: url(../../images/arrow-right.svg);
+  }
+
+  &--next {
+    background-image: url(../../images/arrow-left.svg);
+  }
+}

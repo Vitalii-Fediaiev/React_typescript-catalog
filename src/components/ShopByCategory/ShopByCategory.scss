@@ -1,0 +1,71 @@
+@import "../../style/variables";
+@import "../../style/_mixins";
+
+.category {
+  max-width: 1136px;
+  margin: 0 auto;
+
+  &__container {
+    display: flex;
+    gap: 16px;
+
+    @include onMobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-family: "Mont-Bold", sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -1%;
+    margin-top: 80px;
+
+    @include onMobile {
+      font-size: 22px;
+      text-align: center;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__description {
+    margin: 0;
+  }
+
+  &__name {
+    font-family: "Mont-Regular", sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    color: $primary;
+    margin: 0;
+    padding-top: 24px;
+  }
+
+  &__amount {
+    font-family: "Mont-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: $secondary;
+  }
+
+  &__phones {
+    background-image: url(../../images/category-phones.png);
+
+    &--image {
+      width: 368px;
+      height: 386px;
+    }
+  }
+
+  &__tablets {
+    background-image: url(../../images/category-tablets.png);
+  }
+
+  &__accessories {
+    background-image: url(../../images/category-accessories.png);
+  }
+}
