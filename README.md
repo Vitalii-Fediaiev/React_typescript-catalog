@@ -1,9 +1,3 @@
-# React TypeScript Starter Pack
+Demo React and Typescript-based desktop catalog
+https://vitalii-fediaiev.github.io/React-TS-catalog/#/
 
-To use this template click `Use this template`
-
-### Available Scripts
-
-`Deploy` - available to deploy your application to gh-pages
-
-`SCSS Preprocessor` - available to write your styles with modern style language
